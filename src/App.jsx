@@ -8,7 +8,7 @@ import Specialities from './Specialities.jsx';
 import Studies from './Studies.jsx';
 import Admissions from './Admissions.jsx';
 import OurClubs from './OurClubs.jsx';
-import OurEvents from './OurEvents.JSX';
+import OurEvents from './OurEvents.jsx';
 import LifeinCampus from './LifeinCampus.jsx';
 import JoinUs from './JoinUs.jsx';
 import Footer from './Footer.jsx';
