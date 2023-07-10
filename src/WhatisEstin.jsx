@@ -2,29 +2,33 @@ import estinPic from "./assets/estin-pic.png"
 import { useRef , useEffect } from "react";
 import {motion, useInView, useAnimation} from "framer-motion"
 const WhatIsEstin = () => {
-    const ref = useRef(null)
-    const isInView = useInView(ref, { once:true})
-    const mainControls1 = useAnimation()
-    const mainControls2 = useAnimation()
+    const reftxt = useRef(null)
+    const refimg = useRef(null)
+    const isTextInView = useInView(reftxt, { once:true})
+    const isImgInView = useInView(refimg, { once:true })
+    const textControls = useAnimation()
+    const imgControls = useAnimation()
     useEffect(()=>{
-        if(isInView){
-            mainControls1.start("visble")
-            mainControls2.start("visble")
+        if(isTextInView){
+            textControls.start("visble")
         }
-    }, [isInView])
+        if(isImgInView){
+            imgControls.start("visble")
+        }
+    }, [isTextInView, isImgInView])
     return ( 
-        <div ref={ref} className="what-is-estin" id="whatsestin">
-            <motion.div 
+        <div className="what-is-estin" id="whatsestin">
+            <motion.div ref={reftxt}
             variants={{
                 hidden:{opacity:0, x:-100},
                 visble:{opacity:1.4, x:0},
             }}
             initial="hidden"
-            animate={mainControls1}
+            animate={textControls}
             transition={{duration:1, delay:0}}
             className="text">
                 <h1 className="title">What is <span>Estin ?</span></h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, corporis. Vel, voluptatum aliquid nobis nemo explicabo eligendi. Enim accusantium numquam necessitatibus perspiciatis blanditiis cupiditate! Reiciendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolore, reprehenderit natus sequi soluta, iure explicabo earum dolorem molestias quasi illum aliquid accusamus architecto accusantium tempore aperiam optio quisquam doloribus ipsum at neque. Suscipit quibusdam unde soluta tempora odio ex, rerum omnis ipsam odit, sequi labore, repudiandae incidunt doloremque blanditiis impedit atque assumenda fuga corrupti dignissimos? Esse dolorem, nobis tenetur ad iste ullam! Deserunt nisi laboriosam, quod laudantium asperiores praesentium? Numquam minus maiores at. Esse autem illo voluptate deserunt vero.</p>
+                <p>ESTIN stands for "École supérieure en sciences et technologies de l'informatique et du numérique", it's another grand school of Computer Science, It introduces three new specialities which are AI, IoT & Cyber Security along with Information System. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, nesciunt?</p>
             </motion.div>
             <motion.div 
             variants={{
@@ -32,10 +36,10 @@ const WhatIsEstin = () => {
                 visble:{opacity: 1, scale: 1},
             }}
             initial="hidden"
-            animate={mainControls2}
+            animate={imgControls}
             transition={{duration:1.4}}
             className="images">
-                <img src={estinPic} alt="" />
+                <img  ref={refimg} src={estinPic} alt="estin pics" />
             </motion.div>
 
         </div>

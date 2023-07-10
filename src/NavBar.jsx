@@ -1,6 +1,11 @@
 import { motion } from 'framer-motion';
 import logo from './assets/logo-estin.png'
+import { HiMenuAlt3 } from "react-icons/hi";
 const NavBar = () => {
+    const handelClick =(e)=>{
+        e.target.classList.toggle("clicked")
+        console.log(e.target.classList)
+    }
     return ( 
         <motion.div 
         variants={{
@@ -9,17 +14,16 @@ const NavBar = () => {
         }}
         initial="hidden"
         animate="visible"
-        transition={{duration: 1.2,}}
+        transition={{duration: 1,}}
         className="nav-bar">
             <img src={logo} alt="" />
-            <nav>
+            <HiMenuAlt3 onClick={(e)=>{handelClick(e)}} className='menu-icon'></HiMenuAlt3>
                 <ul>
                     <li><a href="/">Home </a></li>
-                    <li><a href="/">Clubs</a></li>
-                    <li><a href="/">Events</a></li>
-                    <li><a href="/">Life in Campus</a></li>
+                    <li><a href="#our-clubs">Clubs</a></li>
+                    <li><a href="#our-events">Events</a></li>
+                    <li><a href="#life-in-campus">Life in Campus</a></li>
                 </ul>
-            </nav>
         </motion.div>
      );
 }

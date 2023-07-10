@@ -1,6 +1,9 @@
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
-import campus_1 from "./assets/campus-1.png"
+import campus_1 from "./assets/campus_1.png"
+import campus_2 from "./assets/campus_2.png"
+import campus_3 from "./assets/campus_3.png"
+
 const LifeinCampus = () => {
     const refs = [useRef(null), useRef(null), useRef(null), useRef(null)];
     const isInViewArray = [useInView(refs[0], { once: true }), useInView(refs[1], { once: true }), useInView(refs[2], { once: true }), useInView(refs[3], { once: true })];
@@ -21,7 +24,7 @@ const LifeinCampus = () => {
         visible: { opacity: 1, x: 0 },
     }
     return ( 
-        <div className="life-in-campus">
+        <div className="life-in-campus" id='life-in-campus'>
             <motion.h1 ref={refs[0]}
             variants={lefttoRightVariants}
             initial="hidden"
@@ -47,7 +50,7 @@ const LifeinCampus = () => {
             animate={animationControllers[2]}
             transition={{ duration: 1.6, delay: 0 }}
             className="campus-sec">
-                <img src={campus_1} alt="campus image" />
+                <img src={campus_2} alt="campus image" />
                 <div className="text">
                     <h2>Campus</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi optio consequuntur saepe illo possimus reiciendis, accusamus perferendis. Voluptates dicta earum aliquam saepe hic ducimus culpa consequatur dignissimos maiores! Sit, reiciendis non? Autem non nisi voluptatibus!</p>
@@ -63,7 +66,7 @@ const LifeinCampus = () => {
                     <h2>Campus</h2>
                     <p>Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, earum!ipsum dolor sit amet consectetur adipisicing elit. Animi optio consequuntur saepe illo possimus reiciendis, accusamus perferendis. Voluptates dicta earum aliquam saepe hic ducimus culpa consequatur dignissimos maiores! Sit, reiciendis non? Autem non nisi voluptatibus!</p>
                 </div>
-                <img src={campus_1} alt="campus image" />
+                <img src={campus_3} alt="campus image" />
             </motion.div>
         </div>
         

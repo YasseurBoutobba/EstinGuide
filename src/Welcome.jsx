@@ -27,10 +27,10 @@ const Welcome = () => {
                 }}
                 initial="hidden"
                 animate="visible"
-                transition={{duration: 1, delay: 1.8}} 
+                transition={{duration: 1, delay: 1.4}} 
                 className="social-media">
                     <a target='_blank' href='https://www.instagram.com/estin__bejaia/?igshid=MzRlODBiNWFlZA%3D%3D&fbclid=IwAR2ujBVSaHOCXXW0Fl2vu9xwIwPSjyf_MTp8xnmNYZqTmMT637M_osvxqvY'><SlSocialInstagram className='social-icon'/></a>
-                    <a target='_blank' href='https://www.youtube.com/watch?v=MnpuK0MK4yo'><SlSocialFacebook className='social-icon'/></a>
+                    <a target='_blank' href='https://www.facebook.com/groups/694051234569729'><SlSocialFacebook className='social-icon'/></a>
                     <a target='_blank' href='https://www.youtube.com/@estinbejaia'><SlSocialYoutube className='social-icon'/></a>
                     <a target='_blank' href='https://www.linkedin.com/school/estin-bejaia/?fbclid=IwAR3sycqlv5Krnmh9Rhk7ugovpnMFLkRIBrxCLFcj1TL7RgMKyqqUQIN5XIU'><SlSocialLinkedin className='social-icon'/></a>
                 </motion.div>

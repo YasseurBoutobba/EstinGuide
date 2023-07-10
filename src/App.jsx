@@ -16,6 +16,7 @@ function App() {
 
   return (
       <div className='container'>
+        
         {/* ndir navbar responsisve + ndir nta3 active class + ndir nta3 while scroll up  */}
         <NavBar></NavBar>
         <Welcome></Welcome>
@@ -27,10 +28,10 @@ function App() {
             <Route  path='/specialities' element={<Specialities />}></Route>
             <Route  path='/admissions' element={<Admissions />}></Route>
           </Routes>
-        <OurClubs></OurClubs>
-        <OurEvents></OurEvents>
+        <OurClubs ></OurClubs>
+        <OurEvents ></OurEvents>
         <LifeinCampus></LifeinCampus>
-        <JoinUs></JoinUs>
+        <JoinUs ></JoinUs>
         <Footer></Footer>
       </div>
   )

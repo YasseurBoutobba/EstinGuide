@@ -4,6 +4,9 @@ import event_3 from "./assets/event_3.png"
 import event_4 from "./assets/event_4.png"
 import event_5 from "./assets/event_5.png"
 import event_6 from "./assets/event_6.png"
+import event_7 from "./assets/event_7.png"
+import event_8 from "./assets/event_8.png"
+
 import { useRef, useEffect } from "react";
 import {motion, useInView, useAnimation} from "framer-motion"
 const OurEvents = () => {
@@ -16,7 +19,7 @@ const OurEvents = () => {
         }
     }, [isintheView])
     return ( 
-        <div className="our-events" ref={refer}>
+        <div className="our-events" ref={refer} id="our-events">
             <motion.div
             variants={{
                 hidden:{opacity: 0 , x: -100},
@@ -80,14 +83,14 @@ const OurEvents = () => {
                     </div>
                 </div>
                 <div className="event">
-                    <img src={event_6} alt="event img" />
+                    <img src={event_7} alt="event img" />
                     <div className="text">
                         <h3>Code Rally</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, voluptates?</p>
                     </div>
                 </div>
                 <div className="event">
-                    <img src={event_6} alt="event img" />
+                    <img src={event_8} alt="event img" />
                     <div className="text">
                         <h3>Code Rally</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, voluptates?</p>

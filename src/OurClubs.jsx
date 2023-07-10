@@ -6,9 +6,11 @@ import club_5 from "./assets/club_5.png"
 import club_6 from "./assets/club_6.png"
 import club_7 from "./assets/club_7.png"
 import bytecraft from "./assets/bytecraft.svg"
-import { useRef, useEffect } from "react";
+import { useRef, useEffect , useState} from "react";
 import {motion, useInView, useAnimation} from "framer-motion"
 const OurClubs = () => {
+    // the slider part 
+    const [width, setWidth] = useState(0)
     const refer = useRef(null)
     const refcol = useRef(null)
     const clubref = useRef(null)
@@ -30,9 +32,10 @@ const OurClubs = () => {
         if(isClubsinView){
             clubsCardController.start("visible")
         }
+        setWidth(refcol.current.scrollWidth - refcol.current.offsetWidth)
     }, [isintheView, isColinView , isClubsinView])
     return ( 
-        <div className="our-clubs">
+        <div className="our-clubs" id="our-clubs">
             <motion.div
             ref={refer}
             variants={{
@@ -45,7 +48,10 @@ const OurClubs = () => {
                 <h1 className="title">Our <span>clubs</span></h1>
                 <p className="desc">Here, you will discover our clubs where <span>creativity</span>  and <span>knowledge</span>  converge, enhancing the enchantment of Estin, making it a truly <span>delightful experience.</span> </p>
             </motion.div>
-            <div className="imgs-grid" ref={refcol}>
+            <motion.div 
+            drag="x"
+            dragConstraints={{right:0 , left:-width}}
+            className="imgs-grid" ref={refcol}>
                 <motion.div 
                 variants={{
                     hidden:{opacity: 0 , scale: 0.2},
@@ -53,7 +59,7 @@ const OurClubs = () => {
                 }}
                 initial="hidden"
                 animate={sideColsController}
-                transition={{duration: 1, delay: 1}}
+                transition={{duration: .8, delay: 1}}
                 className="col col-1">
                     <img src={club_4} alt="club img" />
                     <img src={club_1} alt="club img" />
@@ -78,12 +84,12 @@ const OurClubs = () => {
                 }}
                 initial="hidden"
                 animate={sideColsController}
-                transition={{duration: 1, delay: 1}}
+                transition={{duration: .8, delay: 1}}
                 className="col col-3">
                     <img src={club_2} alt="club img" />
                     <img src={club_6} alt="club img" />
                 </motion.div>
-            </div>
+            </motion.div>
             <motion.div className="clubs" ref={clubref}
             variants={{
                 hidden:{opacity: 0 , y: 100},

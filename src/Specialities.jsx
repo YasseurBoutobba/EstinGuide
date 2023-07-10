@@ -9,7 +9,7 @@ const Specialities = () => {
         initial="hidden"
         animate="visible"
         transition={{duration: .8, delay: 0}}
-        className="specialities info-sec">
+        className="specialities info-sec" id='specialities'>
             <div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis ex, pariatur quia eius aut id officiis rerum explicabo asperiores aperiam quidem, consectetur nemo autem facere perspiciatis, unde expedita? Libero, officiis reiciendis rerum tempora, cumque tenetur non est incidunt, voluptate ad earum! Velit sit facere soluta sint unde a necessitatibus impedit.</p>
                 <div className="spec-two">

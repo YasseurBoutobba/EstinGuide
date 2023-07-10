@@ -7,13 +7,16 @@
 :root{
   --orange:#FF911C;
 }
+html{
+  scroll-behavior: smooth;
+}
 body{
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
   overflow-x: hidden;
   background-color: white;
+  color: #333;
 }
 button{
   font-family: 'Poppins', sans-serif;
@@ -23,10 +26,11 @@ li{
 }
 a{
   text-decoration: none;
-  color: black;
+  color: #333;
 }
 h1.title{
   position: relative;
+  color: #333;
   font-weight: 500;
   font-size: 2.2rem;
   margin-left: 20px;
@@ -41,9 +45,20 @@ h1.title::before{
   width: 15px;
   background-color: var(--orange);
 }
+@media(max-width:768px){
+  h1.title{
+    font-size: 1.8rem;
+  }
+  p{
+    font-size: 1rem;
+  }
+}
 h1.title span{
   color: var(--orange);
   text-transform: uppercase;
+}
+p{
+  color: #555;
 }
 /* container  */
 .container{
@@ -111,7 +126,46 @@ h1.title span{
 .nav-bar img{
   width: 100px;
 }
+.nav-bar .menu-icon{
+  display: none;
+}
+@media (max-width:768px){
+  .nav-bar .menu-icon{
+    display: block;
+    font-size: 1.8rem;
+    transition: .3s;
+    color: #333;
+    cursor: pointer;
+  }
+  .nav-bar .menu-icon.clicked{
+    color: var(--orange);
+  }
+  .nav-bar ul{
+    display: none;
+  }
+  .nav-bar .menu-icon.clicked + ul{
+    display:block;
+  }
+  .nav-bar .menu-icon.clicked + ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 0;
+    padding-bottom: 20px;
+    text-align: center;
+    border-top: 1px solid #8f4e08;
+  }
+  .nav-bar .menu-icon.clicked + ul li{
+    padding: 10px 0;
+    border-bottom: 1px solid var(--orange);
+    width: 100%;
+  }
 
+}
 /* the welcome  */
 .welcome-cont{
   display: flex;
@@ -119,14 +173,25 @@ h1.title span{
   justify-content: center;
   height: calc(100vh - 80px);
 }
+@media (max-width:768px){
+  .welcome-cont{
+    display: block;
+    height:fit-content;
+  }
+  .welcome-cont .welcome .social-media{
+    display: none;
+  }
+}
 .welcome{
   text-align: center;
+  padding: 20px;
 }
 .welcome h1{
   font-size: 4rem;
   color: var(--orange);
   margin: 0 10px;
 }
+
 .welcome h2{
   font-weight: normal;
   font-size: 2rem;
@@ -137,10 +202,10 @@ h1.title span{
   font-weight: 500;
 }
 .welcome p{
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   line-height: 2;
   color: #555;
-  width: 50ch;
+  max-width: 50ch;
   margin-bottom: 60px;
 }
 .welcome a{
@@ -195,6 +260,22 @@ h1.title span{
   color: var(--orange);
   font-size: 1.8rem;
 }
+@media (max-width:768px){
+  .welcome{
+    padding: 40px 10px;
+  }
+  .welcome h1{
+    font-size: 2.6rem;
+  }
+  .welcome p{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  .welcome a{
+    font-size: 1.4rem;
+    margin-top: 0;
+  }
+}
 /* the What is estin */
 .what-is-estin {
   display: flex;
@@ -218,19 +299,36 @@ h1.title span{
   width: 100%;
   height: 500px;
 }
+@media(max-width:768px){
+  .what-is-estin{
+    flex-direction: column;
+    gap: 40px;
+  }
+  .what-is-estin h1{
+    font-size: 1.8rem;
+  }
+  .what-is-estin p{
+    font-size: 1rem;
+  }
+  .what-is-estin .text{
+    width: 100%;
+  }
+  .what-is-estin .images{
+    width: 100%;
+  }
+}
 
 /* the about  */
 .about{
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 15px;
   width: 100%;
   margin-top: 0;
 }
 .about a{
   text-align: center;
-  padding: 10px 100px;
+  padding: 10px ;
   font-size: 1.6rem;
   border-radius: 20px;
   font-weight: 500;
@@ -239,6 +337,11 @@ h1.title span{
 }
 .about a.active{
   background-color: var(--orange);
+}
+@media(max-width:768px){
+  .about {
+    flex-direction: column;
+  }
 }
 /* the studies  */
 .studies ,.info-sec{
@@ -274,9 +377,10 @@ h1.title span{
   position: absolute;
   height: 100%;
   width: 10px;
-  background-color: black;
+  background-color: #333;
   top: 0;
   right: 0;
+  border-radius: 10px;
 }
 .studies h2{
   text-transform: capitalize;
@@ -295,6 +399,31 @@ h1.title span{
 }
 .studies h2 a.estin-bub:hover{
   color: rgb(0, 140, 255);
+}
+@media(max-width:768px){
+  .studies p.big-p , .studies h3{
+    font-size: 1.2rem;
+  }
+  .studies h2{
+    font-size: 1.2rem;
+  }
+  .studies p{
+    font-size: 1rem;
+  }
+  .studies .first-y-modules{
+    flex-direction: column;
+  }
+  .studies .first-y-modules .semestre{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  .studies .first-y-modules .semestre:first-of-type::after{
+    top: 100%;
+    width: 100%;
+    left: 0;
+    height: 10px;
+  }
 }
 /* the specialties  */
 .specialities , .admissions{
@@ -338,9 +467,10 @@ h1.title span{
   position: absolute;
   height: 100%;
   width: 10px;
-  background-color: black;
+  background-color: #333;
   top: 0;
   right: 0;
+  border-radius: 10px;
 }
 .specialities q , .admissions p.mawzon{
   display: block;
@@ -349,6 +479,25 @@ h1.title span{
   margin-top: 40px;
   font-style: italic;
   font-family: 'Cairo', sans-serif;
+}
+@media(max-width:768px){
+  .specialities .spec-two{
+    flex-direction: column;
+  }
+  .specialities .spec-two .spec{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  .specialities .spec-two .spec:first-of-type::after{
+    top: 100%;
+    width: 100%;
+    left: 0;
+    height: 10px;
+  }
+  .specialities q{
+    font-size: 1.4rem;
+  }
 }
 /* the admissions  */
 .admissions .years{
@@ -368,42 +517,85 @@ h1.title span{
   height: 100%;
   top: 0;
   right: 0;
-  background-color: black;
+  background-color: #333;
+  border-radius: 10px;
 }
 .admissions .years .year p{
   text-align: right;
   font-family: 'Cairo', sans-serif;
   font-weight: 500;
 }
+@media(max-width:768px){
+  .admissions .years{
+    flex-direction: column;
+  }
+  .admissions .years .year{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  .admissions .years .year:first-of-type::after{
+    top: 100%;
+    width: 100%;
+    left: 0;
+    height: 10px;
+  }
+  .admissions p.mawzon{
+    font-size: 1.5rem;
+  }
+}
 /* the our clubs  */
 .our-clubs{
-  text-align: center;
   margin: 50px 0 80px;
 }
-.our-clubs h1.title::before{
-  left: calc( 50% - 120px );
-}
+
 .our-clubs p.desc{
   font-size: 1.4rem;
   line-height: 1.8;
   margin: 40px 0;
   text-transform: capitalize;
   font-weight: 500;
+  text-align: center;
 }
 .our-clubs p.desc span{
   color: var(--orange);
 }
-.our-clubs .imgs-grid{
-  margin: 80px 0;
-  display: flex;
-  gap: 20px;
-  align-items: center;
+@media(min-width:769px){
+  .our-clubs .imgs-grid{
+    margin: 80px 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .our-clubs .imgs-grid .col{
+    width: calc((100% - 40px) / 3);
+  }
+  .our-clubs .imgs-grid img{
+    width: 100%;
+  }
 }
-.our-clubs .imgs-grid .col{
-  width: calc((100% - 40px) / 3);
-}
-.our-clubs .imgs-grid img{
-  width: 100%;
+
+@media(max-width:768px){
+  .our-clubs p.desc{
+    font-size: 1.2rem;
+  }
+  .our-clubs .imgs-grid{
+    display: flex;
+    gap: 20px;
+    cursor: grab;
+    margin-bottom: 60px;
+  }
+  .our-clubs .imgs-grid .col{
+    display: flex;
+    gap: 20px;
+    width: fit-content;
+  }
+  .our-clubs .imgs-grid .col img{
+    height: 300px;
+    width: 350px;
+    border-radius: 2.6rem;
+    object-fit: cover;
+  }
 }
 .our-clubs .clubs{
   display: flex;
@@ -419,12 +611,12 @@ h1.title span{
   align-items: center;
   font-family: 'Source Code Pro', monospace;
   border-radius: 10px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 8px 6px 23px -1px rgba(61, 61, 61, 0.08);
   transition: .3s;
 
 }
 .our-clubs .clubs .club:hover{
-  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 8px 6px 23px -1px rgba(61, 61, 61, 0.1);
   transform: scale(1.02);
 }
 .our-clubs .clubs .club .text h3{
@@ -439,6 +631,12 @@ h1.title span{
   font-weight: bold;
   color: var(--orange);
   gap: 20px;
+}
+@media(max-width:768px){
+  .our-clubs .clubs .club{
+    width: 100%;
+    padding: 10px 20px;
+  }
 }
 /* hte events and workshops  */
 .our-events{
@@ -478,6 +676,14 @@ h1.title span{
   font-size: .8rem;
   color: #555;
 }
+@media(max-width:768px){
+  .our-events h1{
+    font-size: 1.5rem;
+  }
+  .our-events .events .event{
+    width: 100%;
+  }
+}
 /* the life in campus  */
 .life-in-campus{
   margin: 80px 0;
@@ -492,10 +698,15 @@ h1.title span{
   gap: 40px;
   padding: 20px;
 }
+@media(max-width:768px){
+  .life-in-campus .campus-sec{
+    flex-direction: column;
+  }
+}
 .life-in-campus .campus-sec::before{
   content: "";
   position: absolute;
-  height: 6px;
+  height: 10px;
   width: 100%;
   background-color: var(--orange);
   bottom: -40px;
@@ -516,48 +727,18 @@ h1.title span{
 }
 /* the join us  */
 .join-us{
-  margin: 80px 0;
+  margin: 100px 0;
   position: relative;
 }
 .join-us .join-us-cont{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 .join-us p.join{
-  text-align: center;
   text-transform: capitalize;
   font-size: 2rem;
   font-weight: 500;
 }
-.join-us .face-dis{
-  display: flex;
-  align-items: center;
-  gap: 40px;
-
-}
-.join-us .face-dis .facebook-icon {
-  font-size: 6rem;
-  transition: .3s;
-}
-.join-us .face-dis .discord-icon{
-  font-size: 6.5rem;
-  transition: .3s;
-}
-.join-us .face-dis .facebook-icon:hover {
-  color: rgb(30, 131, 247);
-}
-.join-us .face-dis .discord-icon:hover {
-  color: rgb(30, 131, 247);
-}
-.join-us .line{
-  width: 10px;
-  height: 100px;
-  background-color: var(--orange);
-  border-radius: 20px;
-}
-
-.download {
+.join-us .download {
   transition: all 0.3s ease-in-out;
   padding: 15px 40px;
   border-radius: 50px;
@@ -570,27 +751,154 @@ h1.title span{
   color: white;
 }
 
-.download:hover {
+.join-us .download:hover {
   transform: translateY(3px);
   box-shadow: none;
 }
 
-.download:active {
+.join-us .download:active {
   opacity: 0.5;
+}
+@media(max-width:768px){
+  .join-us p.join{
+    font-size: 1.6rem;
+    margin-top: 60px;
+  }
+  .join-us .download{
+    font-size: 1.4rem;
+  }
 }
 /* the footer  */
 .footer{
-  text-align: center;
-  background-color: var(--orange);
-  color: white;
-  margin: 0;
-  padding: 8px;
-  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  padding-bottom: 40px;
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
 }
-.footer p:first-child{
+@media(max-width:768px){
+  .footer{
+    flex-direction: column;
+  }
+}
+.footer .join-discord{
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  width: 30%;
+  gap: 20px;
+}
+@media(max-width:768px){
+  .footer .join-discord{
+    width: 100%;
+  }
+}
+.footer .join-discord img{
+  width: 150px;
+}
+.footer .join-discord a{
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 2rem;
+  border: 2px solid var(--orange);
+  font-size: 1rem;
+  text-transform: capitalize;
+  transition: .3s;
+}
+.footer .join-discord p{
+  transition: inherit;
+}
+.footer .join-discord a:hover{
+  border-color: white;
+  background-color: var(--orange);
+}
+.footer .join-discord a:hover p{
+  color: white;
+}
+.footer .join-discord a .discord-icon{
+  font-size: 1.8rem;
+  color: #7289DA;
+}
+.footer .all-links{
+  display: flex;
+  gap: 80px;
+  width: 60%;
+  justify-content: end;
+}
+@media(max-width:768px){
+  .footer .all-links{
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.footer .see-more{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.footer .see-more .links{
+  display: flex;
+  justify-content: space-between;
   font-size: 1.2rem;
-  margin: 6px;
+  gap: 60px;
+}
+
+.footer .see-more .links ul{
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  margin: 0;
+}
+.footer .see-more .links ul li{
+  padding: 5px;
+  transition: .3s;
+}
+.footer .see-more .links ul li a{
+  transition: .3s;
+}
+.footer .see-more .links ul li:hover a{
+  color: var(--orange);
+}
+.footer .all-links .social-links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+@media(max-width:768px){
+  .footer .all-links {
+    gap: 10px;
+  }
+  .footer .all-links .social-links{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .footer .all-links .social-links h3{
+    width: 50%;
+  }
+}
+.footer .all-links .social-links .icon{
+  font-size: 1.6rem;
+  color: var(--orange);
+  transition: .3s;
+}
+.footer .all-links .social-links .icon:hover{
+  transform: scale(1.08);
+}
+.copy-rights{
+  text-transform: capitalize;
+  border-top: 1px solid #999;
+  display: flex;
+  justify-content: space-between;
+  font-size: .8rem;
+}
+@media(max-width:768px){
+  .copy-rights p{
+    font-size: 10px;
+  }
 }
