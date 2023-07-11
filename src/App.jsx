@@ -12,6 +12,9 @@ import OurEvents from './OurEvents.jsx';
 import LifeinCampus from './LifeinCampus.jsx';
 import JoinUs from './JoinUs.jsx';
 import Footer from './Footer.jsx';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 function App() {
 
   return (

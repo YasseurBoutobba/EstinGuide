@@ -1,14 +1,8 @@
-import { motion } from 'framer-motion';
+
+import 'aos/dist/aos.css';
 const Specialities = () => {
     return ( 
-        <motion.div
-        variants={{
-            hidden:{opacity: 0 , scale: 0.3},
-            visible:{opacity: 1, scale: 1},
-        }}
-        initial="hidden"
-        animate="visible"
-        transition={{duration: .8, delay: 0}}
+        <div data-aos="zoom-in" data-aos-duration="1000"
         className="specialities info-sec" id='specialities'>
             <div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis ex, pariatur quia eius aut id officiis rerum explicabo asperiores aperiam quidem, consectetur nemo autem facere perspiciatis, unde expedita? Libero, officiis reiciendis rerum tempora, cumque tenetur non est incidunt, voluptate ad earum! Velit sit facere soluta sint unde a necessitatibus impedit.</p>
@@ -24,7 +18,7 @@ const Specialities = () => {
                 </div>
                 <q>Some random Quote in One Line</q> 
             </div>
-        </motion.div>
+        </div>
      );
 }
  

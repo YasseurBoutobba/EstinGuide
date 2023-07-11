@@ -1,14 +1,7 @@
-import { motion } from 'framer-motion';
+import 'aos/dist/aos.css';
 const Admissions = () => {
     return ( 
-        <motion.div 
-        variants={{
-            hidden:{opacity: 0 , scale: 0.3},
-            visible:{opacity: 1, scale: 1},
-        }}
-        initial="hidden"
-        animate="visible"
-        transition={{duration: .8, delay: 0}}
+        <div data-aos="zoom-in" data-aos-duration="1000"
         className="admissions info-sec">
             <div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis ex, pariatur quia eius aut id officiis rerum explicabo asperiores aperiam quidem, consectetur nemo autem facere perspiciatis, unde expedita? Libero, officiis reiciendis rerum tempora, cumque tenetur non est incidunt, voluptate ad earum! Velit sit facere soluta sint unde a necessitatibus impedit.</p>
@@ -28,7 +21,7 @@ const Admissions = () => {
                 </div>
                 <p className="mawzon">المعدل الموزون = ((نقطة الباكالوريا * 2 )+ نقطة الرياضيات )/ 3</p> 
             </div>
-        </motion.div>
+        </div>
      );
 }
  

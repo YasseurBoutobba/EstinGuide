@@ -1,18 +1,10 @@
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-import { motion } from 'framer-motion';
+import 'aos/dist/aos.css';
 import { FaAnglesDown } from "react-icons/fa6";
 import { SlSocialFacebook, SlSocialInstagram, SlSocialYoutube, SlSocialLinkedin } from "react-icons/sl";
 const Welcome = () => {
     return ( 
-        <motion.div
-        variants={{
-            hidden:{opacity: 0 , scale: 0.5},
-            visible:{opacity: 1, scale: 1},
-        }}
-        initial="hidden"
-        animate="visible"
-        transition={{duration: 1, delay: .8}}
+        <div
+        data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="800"
         className="welcome-cont">
             <div className="welcome">
                 <h1>Marhba Bikom</h1>
@@ -20,22 +12,16 @@ const Welcome = () => {
                 <p>Welcome to our website! This platform is designed specifically for individuals like you, aiming to provide valuable insights and information about our esteemed school.</p>
                 <a href='#whatsestin'>Let's discover it together</a>
                 <FaAnglesDown className='arrow-down'/>
-                <motion.div
-                variants={{
-                    hidden:{opacity: 0 , y: -20},
-                    visible:{opacity: 1, y: 0},
-                }}
-                initial="hidden"
-                animate="visible"
-                transition={{duration: 1, delay: 1.4}} 
+                <div
+                data-aos="fade-down" data-aos-duration="900" data-aos-delay="1600"
                 className="social-media">
                     <a target='_blank' href='https://www.instagram.com/estin__bejaia/?igshid=MzRlODBiNWFlZA%3D%3D&fbclid=IwAR2ujBVSaHOCXXW0Fl2vu9xwIwPSjyf_MTp8xnmNYZqTmMT637M_osvxqvY'><SlSocialInstagram className='social-icon'/></a>
                     <a target='_blank' href='https://www.facebook.com/groups/694051234569729'><SlSocialFacebook className='social-icon'/></a>
                     <a target='_blank' href='https://www.youtube.com/@estinbejaia'><SlSocialYoutube className='social-icon'/></a>
                     <a target='_blank' href='https://www.linkedin.com/school/estin-bejaia/?fbclid=IwAR3sycqlv5Krnmh9Rhk7ugovpnMFLkRIBrxCLFcj1TL7RgMKyqqUQIN5XIU'><SlSocialLinkedin className='social-icon'/></a>
-                </motion.div>
+                </div>
             </div>
-        </motion.div>
+        </div>
      );
 }
  

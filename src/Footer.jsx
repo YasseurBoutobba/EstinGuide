@@ -2,9 +2,12 @@ import logo from './assets/logo-estin.png'
 import { FaDiscord } from "react-icons/fa6";
 import { SlSocialFacebook, SlSocialInstagram, SlSocialYoutube, SlSocialLinkedin } from "react-icons/sl";
 import { Link } from 'react-router-dom';
+import 'aos/dist/aos.css';
+
 const Footer = () => {
     return ( 
-        <>
+        <div data-aos="fade-up" data-aos-duration="1000"
+        className='footer-cont'>
         <div className="footer">
             <div className="join-discord">
                 <img src={logo} alt="" />
@@ -46,7 +49,7 @@ const Footer = () => {
             <p>all rights are reserved </p>
             <p>designed by hiba bellatreche ✨</p>
         </div>
-        </>
+        </div>
         
      );
 }
