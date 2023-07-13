@@ -1,13 +1,21 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import 'aos/dist/aos.css';
-   
+import AOS from 'aos';
 const About = () => {
     const [activeElement, setActiveElement] = useState("link_1");
     const handleClick = (elementId) => {
         setActiveElement(elementId);
     };
-    
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh(); 
+      
+        return () => {
+          AOS.refreshHard();
+        };
+      }, []);
+      
     return ( 
         <div 
         data-aos="fade-right" data-aos-duration="1000"

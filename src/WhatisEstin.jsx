@@ -8,7 +8,16 @@ const WhatIsEstin = () => {
             data-aos="fade-right" data-aos-duration="1000"
             className="text">
                 <h1 className="title">What is <span>Estin ?</span></h1>
-                <p>ESTIN stands for "École supérieure en sciences et technologies de l'informatique et du numérique", it's another grand school of Computer Science, It introduces three new specialities which are AI, IoT & Cyber Security along with Information System. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, nesciunt?</p>
+                <p>ESTIN, which stands for "École supérieure en sciences et technologies de l'informatique et du numérique", is a new addition to the Higher Schools of Computer Science in Algeria, specifically ESI Alger and ESI-SBA. 
+                    <br/>
+                    ESTIN offers a comprehensive five-year program in Computer Engineering with an  'ingénieur d'État' degree .
+                    <br/>
+                     The curriculum is designed to provide students with a strong foundation in computer science and technology, preparing them for a successful career in the field.In addition to the core computer engineering courses.
+                    <br/> ESTIN introduces two new specializations to its students:
+                    <br/>  <span>AI and data science</span> & <span>Cyber Security</span>.
+
+
+                </p>
             </div>
             <div 
             data-aos="fade-left" data-aos-duration="1000"

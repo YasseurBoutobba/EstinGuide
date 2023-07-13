@@ -6,6 +6,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const NavBar = () => {
+    const thebody = document.getElementsByTagName('body')
     const handelClick =(e)=>{
         e.target.classList.toggle("clicked")
     }
@@ -17,7 +18,11 @@ const NavBar = () => {
         data-aos="fade-down" data-aos-duration="1000"
         className="nav-bar">
             <img src={logo} alt="" />
-            <HiMenuAlt3 onClick={(e)=>{handelClick(e)}} className='menu-icon'></HiMenuAlt3>
+            <div onClick={(e)=>{handelClick(e)}} className='menu-icon'>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
                 <ul>
                     <li><a href="/">Home </a></li>
                     <li><a href="#our-clubs">Clubs</a></li>

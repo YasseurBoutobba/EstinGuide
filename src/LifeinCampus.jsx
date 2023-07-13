@@ -10,7 +10,7 @@ const LifeinCampus = () => {
             <h1 data-aos="fade-right" data-aos-duration="1000"
             className="title">life in <span>campus</span></h1>
 
-            <div data-aos="fade-right" data-aos-duration="1000"
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true"
             className="campus-sec">
                 <div className="text">
                     <h2>Campus</h2>

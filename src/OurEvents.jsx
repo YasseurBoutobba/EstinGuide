@@ -7,7 +7,19 @@ import event_6 from "./assets/event_6.png"
 import event_7 from "./assets/event_7.png"
 import event_8 from "./assets/event_8.png"
 import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+import AOS from 'aos';
+
 const OurEvents = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh(); // Refresh AOS on component re-render
+      
+        return () => {
+          AOS.refreshHard();
+        };
+      }, []);
+      
     return ( 
         <div className="our-events" id="our-events">
             <div data-aos="fade-right" data-aos-duration="1000" >
