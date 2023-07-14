@@ -22,14 +22,14 @@ const LifeinCampus = () => {
             className="campus-sec">
                 <img src={campus_2} alt="campus image" />
                 <div className="text">
-                    <h2>Campus</h2>
+                    <h2>Restau</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi optio consequuntur saepe illo possimus reiciendis, accusamus perferendis. Voluptates dicta earum aliquam saepe hic ducimus culpa consequatur dignissimos maiores! Sit, reiciendis non? Autem non nisi voluptatibus!</p>
                 </div>
             </div>
             <div data-aos="fade-right" data-aos-duration="1000"
             className="campus-sec">
                 <div className="text">
-                    <h2>Campus</h2>
+                    <h2>Rooms</h2>
                     <p>Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, earum!ipsum dolor sit amet consectetur adipisicing elit. Animi optio consequuntur saepe illo possimus reiciendis, accusamus perferendis. Voluptates dicta earum aliquam saepe hic ducimus culpa consequatur dignissimos maiores! Sit, reiciendis non? Autem non nisi voluptatibus!</p>
                 </div>
                 <img src={campus_3} alt="campus image" />

@@ -1,4 +1,5 @@
 import 'aos/dist/aos.css';
+import InfosPdf from "./assets/Infos.pdf"
 const JoinUs = () => {
    
     return ( 
@@ -8,7 +9,7 @@ const JoinUs = () => {
             <div data-aos="fade-up" data-aos-duration="1000"
             className="join-us-cont">
                 <p className="join">download this PDF file</p>
-                <a className="download">Download</a>
+                <a className="download"  href={InfosPdf} download="Infos.pdf">Download</a>
             </div>
             
         </div>
