@@ -1,11 +1,11 @@
-import event_1 from "./assets/event_1.png"
-import event_2 from "./assets/event_2.png"
-import event_3 from "./assets/event_3.png"
-import event_4 from "./assets/event_4.png"
-import event_5 from "./assets/event_5.png"
-import event_6 from "./assets/event_6.png"
-import event_7 from "./assets/event_7.png"
-import event_8 from "./assets/event_8.png"
+import event_1 from "../assets/pic/event_1.png"
+import event_2 from "../assets/pic/event_2.png"
+import event_3 from "../assets/pic/event_3.png"
+import event_4 from "../assets/pic/event_4.png"
+import event_5 from "../assets/pic/event_5.png"
+import event_6 from "../assets/pic/event_6.png"
+import event_7 from "../assets/pic/event_7.png"
+import event_8 from "../assets/pic/event_8.png"
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import AOS from 'aos';

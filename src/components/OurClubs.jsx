@@ -1,16 +1,16 @@
-import club_1 from "./assets/club_1.png"
-import club_2 from "./assets/club_2.png"
-import club_3 from "./assets/club_3.png"
-import club_4 from "./assets/club_4.png"
-import club_5 from "./assets/club_5.png"
-import club_6 from "./assets/club_6.png"
-import club_7 from "./assets/club_7.png"
-import bytecraft from "./assets/bytecraft.svg"
-import gdsc from "./assets/gdsc.webp"
-import soai from "./assets/soai.jpg"
-import suiris from"./assets/suiris.jpg"
+import club_1 from "../assets/pic/club_1.png"
+import club_2 from "../assets/pic/club_2.png"
+import club_3 from "../assets/pic/club_3.png"
+import club_4 from "../assets/pic/club_4.png"
+import club_5 from "../assets/pic/club_5.png"
+import club_6 from "../assets/pic/club_6.png"
+import club_7 from "../assets/pic/club_7.png"
+import bytecraft from "../assets/svg/bytecraft.svg"
+import gdsc from "../assets/logo/gdsc.webp"
+import soai from "../assets/logo/soai.jpg"
+import suiris from"../assets/logo/suiris.jpg"
 import 'aos/dist/aos.css';
-import { BrowserView, MobileView } from 'react-device-detect';
+// import { isMobile } from 'react-device-detect';
 
 
 
@@ -24,43 +24,32 @@ const OurClubs = () => {
                 <h1 className="title">Our <span>clubs</span></h1>
                 <p className="desc">Here, you will discover our clubs where <span>creativity</span>  and <span>knowledge</span>  converge, enhancing the enchantment of Estin, making it a truly <span>delightful experience.</span> </p>
             </div>
-            <BrowserView>
-            <div 
+            {/* <BrowserView> */}
+          
+                <div 
             className="imgs-grid" >
                 <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200"
                 className="col col-1">
-                    <img src={club_4} alt="club img" />
                     <img src={club_1} alt="club img" />
+                    <img src={club_2} alt="club img" />
                 </div>
                 <div data-aos="fade-up" data-aos-duration="1000"
                 className="col col-2">
                     <img src={club_3} alt="club img" />
+                    <img src={club_4} alt="club img" />
                     <img src={club_5} alt="club img" />
-                    <img src={club_7} alt="club img" />
                 </div>
                 <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200"
                 className="col col-3">
-                    <img src={club_2} alt="club img" />
+                    
                     <img src={club_6} alt="club img" />
+                    <img src={club_7} alt="club img" />
                 </div>
             </div>
-            </BrowserView>
-            <MobileView>
-                <div className="slider">
-                    <div className="slide-track" >
-                        <div className="slide"><img src={club_4} alt="club img" /></div>
-                        <div className="slide"><img src={club_1} alt="club img" /></div>
-                        <div className="slide"><img src={club_3} alt="club img" /></div>
-                        <div className="slide"><img src={club_5} alt="club img" /></div>
-                        <div className="slide"><img src={club_7} alt="club img" /></div>
-                        <div className="slide"><img src={club_2} alt="club img" /></div>
-                      <div className="slide"><img src={club_6} alt="club img" /></div>
-                    </div>
-                </div>
             
-            </MobileView>
-            <div 
-            className="clubs" >
+            
+           
+            <div className="clubs" >
                 <div data-aos="fade-up" data-aos-duration="900" 
                 className="club" onClick={()=> window.open("https://www.instagram.com/bytecraft.estin/?hl=fr", "_blank")}>
                     <div className="text">

@@ -1,4 +1,4 @@
-import logo from './assets/logo-estin.png'
+import logo from '../assets/logo/logo-estin.png'
 import { FaDiscord } from "react-icons/fa6";
 import { SlSocialFacebook, SlSocialInstagram, SlSocialYoutube, SlSocialLinkedin } from "react-icons/sl";
 import { Link } from 'react-router-dom';
@@ -37,10 +37,13 @@ const Footer = () => {
                 </div>
                 <div className="social-links">
                     <h3>follow us </h3>
-                    <a href="https://www.instagram.com/estin__bejaia/?igshid=MzRlODBiNWFlZA%3D%3D&fbclid=IwAR00SgDXsKNchkbbhI3SWnGcJOR1AejPRHjegwB23S1WrfOiOCOipavlQn4" target='_blank'><SlSocialInstagram className='icon'></SlSocialInstagram></a>
-                    <a href="https://www.youtube.com/@estinbejaia" target='_blank'><SlSocialYoutube className='icon'></SlSocialYoutube></a>
-                    <a href="https://www.facebook.com/groups/694051234569729" target='_blank'><SlSocialFacebook className='icon'></SlSocialFacebook></a>
-                    <a href="https://www.linkedin.com/school/estin-bejaia/?fbclid=IwAR0wnHe0Ty5IupeFMHr6m1t_bwjV8XG3T7Q2RuzLi42Hq5seITyoYt0Msjc" target='_blank'><SlSocialLinkedin className='icon'></SlSocialLinkedin></a>
+                    <div>
+                        <Link href="https://www.instagram.com/estin__bejaia/?igshid=MzRlODBiNWFlZA%3D%3D&fbclid=IwAR00SgDXsKNchkbbhI3SWnGcJOR1AejPRHjegwB23S1WrfOiOCOipavlQn4" target='_blank'><SlSocialInstagram className='icon'></SlSocialInstagram></Link>
+                    <Link href="https://www.youtube.com/@estinbejaia" target='_blank'><SlSocialYoutube className='icon'></SlSocialYoutube></Link>
+                    <Link href="https://www.facebook.com/groups/694051234569729" target='_blank'><SlSocialFacebook className='icon'></SlSocialFacebook></Link>
+                    <Link href="https://www.linkedin.com/school/estin-bejaia/?fbclid=IwAR0wnHe0Ty5IupeFMHr6m1t_bwjV8XG3T7Q2RuzLi42Hq5seITyoYt0Msjc" target='_blank'><SlSocialLinkedin className='icon'></SlSocialLinkedin></Link>
+                    </div>
+                    
                 </div>
             </div>
             

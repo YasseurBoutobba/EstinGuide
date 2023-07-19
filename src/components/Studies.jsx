@@ -19,8 +19,8 @@ const Studies = () => {
                     <p>you will learn : <br /> Data Structures and Algorithms (Dynamic), Analyse 2, Algebra 2, Electronique, Intro to OS 2, French (Speaking), Mécanique de Point, English</p>
                 </div>
             </div>
-            <h2>For more informations about the subject <br /> you can visit 
-             <a className="estin-bub" href="https://bib.gdsc-estin.com/" target="_blank"> estin bub</a>  or <a className="estin-rep" href="https://rep.estin.dz/" target="_blank">estin rep</a></h2>
+            {/* <h2>For more informations about the subject <br /> you can visit  */}
+             {/* <a className="estin-bub" href="https://bib.gdsc-estin.com/" target="_blank"> estin bub</a>  or <a className="estin-rep" href="https://rep.estin.dz/" target="_blank">estin rep</a></h2> */}
         </div>
      );
 }

@@ -1,6 +1,7 @@
 import 'aos/dist/aos.css';
 import { FaAnglesDown } from "react-icons/fa6";
 import { SlSocialFacebook, SlSocialInstagram, SlSocialYoutube, SlSocialLinkedin } from "react-icons/sl";
+import { Link } from 'react-router-dom';
 const Welcome = () => {
     return ( 
         <div
@@ -15,10 +16,10 @@ const Welcome = () => {
                 <div
                 data-aos="fade-down" data-aos-duration="900" data-aos-delay="1600"
                 className="social-media">
-                    <a target='_blank' href='https://www.instagram.com/estin__bejaia/?igshid=MzRlODBiNWFlZA%3D%3D&fbclid=IwAR2ujBVSaHOCXXW0Fl2vu9xwIwPSjyf_MTp8xnmNYZqTmMT637M_osvxqvY'><SlSocialInstagram className='social-icon'/></a>
-                    <a target='_blank' href='https://www.facebook.com/groups/694051234569729'><SlSocialFacebook className='social-icon'/></a>
-                    <a target='_blank' href='https://www.youtube.com/@estinbejaia'><SlSocialYoutube className='social-icon'/></a>
-                    <a target='_blank' href='https://www.linkedin.com/school/estin-bejaia/?fbclid=IwAR3sycqlv5Krnmh9Rhk7ugovpnMFLkRIBrxCLFcj1TL7RgMKyqqUQIN5XIU'><SlSocialLinkedin className='social-icon'/></a>
+                    <Link target='_blank' to='https://www.instagram.com/estin__bejaia/?igshid=MzRlODBiNWFlZA%3D%3D&fbclid=IwAR2ujBVSaHOCXXW0Fl2vu9xwIwPSjyf_MTp8xnmNYZqTmMT637M_osvxqvY'><SlSocialInstagram className='social-icon'/></Link>
+                    <Link target='_blank' to='https://www.facebook.com/groups/694051234569729'><SlSocialFacebook className='social-icon'/></Link>
+                    <Link target='_blank' to='https://www.youtube.com/@estinbejaia'><SlSocialYoutube className='social-icon'/></Link>
+                    <Link target='_blank' to='https://www.linkedin.com/school/estin-bejaia/?fbclid=IwAR3sycqlv5Krnmh9Rhk7ugovpnMFLkRIBrxCLFcj1TL7RgMKyqqUQIN5XIU'><SlSocialLinkedin className='social-icon'/></Link>
                 </div>
             </div>
         </div>

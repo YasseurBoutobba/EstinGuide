@@ -1,4 +1,4 @@
-import logo from './assets/logo-estin.png'
+import logo from '../assets/logo/Bytecraft.png'
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
