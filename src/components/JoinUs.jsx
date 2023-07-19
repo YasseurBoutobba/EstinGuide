@@ -1,5 +1,6 @@
-import 'aos/dist/aos.css';
 import InfosPdf from "../assets/Infos.pdf"
+
+
 const JoinUs = () => {
    
     return ( 

@@ -1,4 +1,5 @@
-import 'aos/dist/aos.css';
+
+
 const Admissions = () => {
     return ( 
         <div data-aos="zoom-in" data-aos-duration="1000"

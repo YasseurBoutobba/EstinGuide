@@ -9,15 +9,18 @@
 }
 html{
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body{
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   background-color: white;
   color: #333;
 }
+
+
 button{
   font-family: 'Poppins', sans-serif;
 }
@@ -159,7 +162,8 @@ p span{
   }
 
   .nav-bar{
-    padding-inline: 5px;
+    padding-left: 5px;
+    padding-right: 10px;
     /* overflow-x: hidden; */
   }
     .nav-bar img {
@@ -332,6 +336,7 @@ p span{
   justify-content: space-between;
   gap: 20px;
   padding: 50px 0;
+  overflow: hidden;
 }
 /* .what-is-estin .text{
   width: 50%;
@@ -824,26 +829,22 @@ p span{
   padding: 50px 0;
   position: relative;
   display: flex;
-  /* align-items: center; */
+  overflow: hidden;
   flex-direction: column;
-  /* gap: 80px; */
 }
 
 
 
 .life-in-campus .campus-sec{
   display: flex;
-  /* align-items: center; */
   justify-content: space-between;
   position: relative;
-  /* margin-bottom:80px ; */
   gap: 40px;
-  padding: 80px 20px;
+  padding: 40px 20px;
 
 }
 
 .campus-1-border{
-  /* background-color: var(--orange); */
   border-left: 6px solid var(--orange) ;
   border-bottom: 6px solid var(--orange) ;
   border-radius: 0 0 0 55px;
@@ -859,18 +860,20 @@ p span{
 
 .life-in-campus .campus-sec .img-container{
   width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .life-in-campus .campus-sec .img-container img{
   width: 100%;
   object-fit: cover;
-
 }
 
 .life-in-campus .campus-sec .text{
   max-width: 550px;
   text-align: justify;
-  line-height: 40px;
+  /* line-height: 40px; */
 }
 
 @media(max-width:768px){
@@ -888,14 +891,10 @@ p span{
     padding: 20px 8px;
 
   }
-    .life-in-campus .campus-sec .img-container {
-      width: 100%;
-      order: 1;
-    }
-
-        .life-in-campus .campus-sec .text {
-          line-height: 30px;
-        }
+  .life-in-campus .campus-sec .img-container {
+    width: 100%;
+    order: 1;
+  }
 }
 
 .life-in-campus .campus-sec .text h2{
@@ -980,8 +979,10 @@ p span{
   align-items: center;
   justify-content: space-between;
   text-transform: capitalize;
-  padding: 60px 0 40px;
+  padding: 40px 0 40px;
+  margin-top: 40px;
   position: relative;
+  border-top: 2px solid #999;
 }
 
 @media(max-width:768px){

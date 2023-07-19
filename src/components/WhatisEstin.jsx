@@ -1,5 +1,7 @@
 import estinPic from "../assets/pic/estin-pic.png"
-import 'aos/dist/aos.css';
+
+
+
 const WhatIsEstin = () => {
       
     return ( 

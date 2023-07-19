@@ -1,7 +1,7 @@
-import 'aos/dist/aos.css';
 import { FaAnglesDown } from "react-icons/fa6";
 import { SlSocialFacebook, SlSocialInstagram, SlSocialYoutube, SlSocialLinkedin } from "react-icons/sl";
 import { Link } from 'react-router-dom';
+
 const Welcome = () => {
     return ( 
         <div

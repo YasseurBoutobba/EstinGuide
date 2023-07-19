@@ -2,7 +2,7 @@ import logo from '../assets/logo/logo-estin.png'
 import { FaDiscord } from "react-icons/fa6";
 import { SlSocialFacebook, SlSocialInstagram, SlSocialYoutube, SlSocialLinkedin } from "react-icons/sl";
 import { Link } from 'react-router-dom';
-import 'aos/dist/aos.css';
+
 
 const Footer = () => {
     return ( 

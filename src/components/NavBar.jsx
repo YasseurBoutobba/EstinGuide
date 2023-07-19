@@ -1,14 +1,9 @@
 import logo from '../assets/logo/Bytecraft.png'
-import { useEffect } from 'react';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const NavBar = () => {
     
-    useEffect(() => {
-        AOS.init();
-        
-      }, []);
+  
     return ( 
         <div 
         data-aos="fade-down" data-aos-duration="1000"
