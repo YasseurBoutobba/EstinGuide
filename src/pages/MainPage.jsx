@@ -1,13 +1,13 @@
-import { Route, Routes } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import Welcome from '../components/Welcome';
-import WhatIsEstin from '../components/WhatIsEstin';
 import OurClubs from '../components/OurClubs';
 import OurEvents from '../components/OurEvents';
 import LifeinCampus from '../components/LifeinCampus';
 import JoinUs from '../components/JoinUs';
 import Footer from '../components/Footer';
 import About from '../components/About';
+import Estin from '../components/Estin';
+
 
 
 
@@ -16,7 +16,7 @@ function MainPage() {
     <div className='main-class'>
       <NavBar />
       <Welcome />
-      <WhatIsEstin />
+      <Estin />
       <About />
       <OurClubs />
       <OurEvents />

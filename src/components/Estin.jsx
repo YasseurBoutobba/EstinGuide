@@ -2,7 +2,7 @@ import estinPic from "../assets/pic/estin-pic.png"
 
 
 
-const WhatIsEstin = () => {
+const Estin = () => {
       
     return ( 
         <div className="what-is-estin" id="whatsestin">
@@ -33,4 +33,4 @@ const WhatIsEstin = () => {
      );
 }
  
-export default WhatIsEstin;
+export default Estin;
